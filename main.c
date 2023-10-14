@@ -200,9 +200,9 @@ void busLists()
   printf("\nBus.No\tName\t\t\tDestinations  \t\tCharges  \t\tTime\n");
   printf("-----------------------------------------------------------------------------------------");
   resetColor();
-  printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000   \t\t07:00  AM");
-  printf("\n2\tPhaphara Travels     \tKavre To Dharan       \tTk.55    \t\t01:30  PM");
-  printf("\n3\tShiv Ganga Travels   \tAllahabad To Gorakhpur\tTk.40    \t\t03:50  PM");
+  printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000    \t\t07:00  AM");
+  printf("\n2\tAK_Travels           \tDhaka To Syleth       \tTk.1200    \t\t01:30  PM");
+  printf("\n3\tShiv Ganga Travels   \tDhaka To Mymensingh   \tTk.40      \t\t03:50  PM");
   printf("\n4\tSuper Deluxe         \tPokhara To Benigha    \tTk.70    \t\t01:00  AM");
   printf("\n5\tSai Baba Travels     \tMaitidevi To Janakpur \tTk.55    \t\t12:05  AM");
   printf("\n6\tShine On Travels     \tMadhubani to Patna    \tTk.40    \t\t09:30  AM");
