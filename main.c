@@ -205,7 +205,7 @@ void busLists()
   printf("\n3\tShiv Ganga Travels   \tDhaka To Mymensingh   \tTk.40      \t\t03:50  PM");
   printf("\n4\tSuper Deluxe         \tPokhara To Benigha    \tTk.70      \t\t01:00  AM");
   printf("\n5\tSai Baba Travels     \tMaitidevi To Janakpur \tTk.55      \t\t12:05  AM");
-  printf("\n6\tShine On Travels     \tMadhubani to Patna    \tTk.40      \t\t09:30  AM");
+  printf("\n6\tShine On Travels     \tMadhubani to Patna    \tTk.40    \t\t09:30  AM");
   printf("\n7\tMayur Travels        \tPatna To Gaya         \tTk.70      \t\t11:00  PM");
   printf("\n8\tRajjo Travels       \tBegusarai To Patna     \tTk.55      \t\t08:15  AM");
   printf("\n9\tShree Travels        \tGaya To Chhapra       \tTk.40    \t\t04:00  PM");
