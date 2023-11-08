@@ -210,7 +210,7 @@ void busLists()
   printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.800     \t\t08:15  AM");
   printf("\n9\tShree Travels        \tDhaka To Kuakata      \tTk.1000    \t\t04:00  PM");
   printf("\n");
-  printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
+  printf("\n   PRESS 'ENTER' KEY TO CONTINUE  ");
   getch();
 }
 void cancel(int randomNum)
