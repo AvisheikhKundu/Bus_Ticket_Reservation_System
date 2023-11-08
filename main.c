@@ -207,8 +207,8 @@ void busLists()
   printf("\n5\tSai Baba Travels     \tDhaka To Dinajpur     \tTk.1500    \t\t12:05  AM");
   printf("\n6\tShine On Travels     \tDhaka to Chuyadanga   \tTk.800     \t\t09:30  AM");
   printf("\n7\tMayur Travels        \tDhaka To Chottogram   \tTk.1000    \t\t11:00  PM");
-  printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.55      \t\t08:15  AM");
-  printf("\n9\tShree Travels        \tDhaka To Kuakata      \tTk.40      \t\t04:00  PM");
+  printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.800     \t\t08:15  AM");
+  printf("\n9\tShree Travels        \tDhaka To Kuakata      \tTk.1000    \t\t04:00  PM");
   printf("\n");
   printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
   getch();
