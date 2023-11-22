@@ -143,6 +143,7 @@ void login()
   printf("\n\n=========================================================================================\n\n");
   resetColor();
 login:
+
 {
   printf("\n\nUserName: ");
   gets(matchUser);
