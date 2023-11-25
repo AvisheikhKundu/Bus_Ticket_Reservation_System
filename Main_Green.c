@@ -203,11 +203,11 @@ void busLists()
   resetColor();
   printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000    \t\t07:00  AM");
   printf("\n2\tAK_Travels           \tDhaka To Syleth       \tTk.900     \t\t01:30  PM");
-  printf("\n3\tEna Paribahan        \tDhaka To Mymensingh   \tTk.700     \t\t03:50  PM");
+  printf("\n3\tEna Paribahan        \tDhaka To Kuakata      \tTk.700     \t\t03:50  PM");
   printf("\n4\tSuper Deluxe         \tDhaka To Khulna       \tTk.700     \t\t07:00  AM");
   printf("\n5\tRoyal Express        \tDhaka To Dinajpur     \tTk.1500    \t\t12:05  AM");
-  printf("\n6\tShine On Travels     \tDhaka to Chuyadanga   \tTk.800     \t\t09:30  AM");
-  printf("\n7\tMayur Travels        \tDhaka To Chottogram   \tTk.1000    \t\t11:00  PM");
+  printf("\n6\tShohag Paribahan     \tDhaka to Chuyadanga   \tTk.800     \t\t09:30  AM");
+  printf("\n7\tMayur Travels        \tDhaka To Benapole     \tTk.1000    \t\t11:00  PM");
   printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.800     \t\t08:15  AM");
   printf("\n9\tShree Travels        \tDhaka To Kuakata      \tTk.1000    \t\t04:00  PM");
   printf("\n");
