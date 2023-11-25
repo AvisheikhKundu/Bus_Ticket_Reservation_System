@@ -215,11 +215,11 @@ void busLists()
   resetColor();
   printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000     \t\t07:00  AM");
   printf("\n2\tAK_Travels           \tDhaka To Syleth       \tTk.1000     \t\t01:30  PM");
-  printf("\n3\tShiv Ganga Travels   \tDhaka To Kuakata      \tTk.1500     \t\t03:50  PM");
+  printf("\n3\tEna Paribahan        \tDhaka To Kuakata      \tTk.1500     \t\t03:50  PM");
   printf("\n4\tSuper Deluxe         \tDhaka To Dinajpur     \tTk.2000     \t\t07:00  AM");
-  printf("\n5\tSai Baba Travels     \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
-  printf("\n6\tShine On Travels     \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
-  printf("\n7\tMayur Travels        \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
+  printf("\n5\tSkyLine              \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
+  printf("\n6\tRoyal Express        \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
+  printf("\n7\tShohag Paribahan        \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
   printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
   printf("\n9\tShree Travels        \tDhaka To Chottogram   \tTk.1000     \t\t04:00  PM");
   printf("\n");
