@@ -220,8 +220,8 @@ void busLists()
   printf("\n5\tSkyLine              \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
   printf("\n6\tRoyal Express        \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
   printf("\n7\tShohag Paribahan     \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
-  printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
-  printf("\n9\tShree Travels        \tDhaka To Chottogram   \tTk.1000     \t\t04:00  PM");
+  printf("\n8\tHanif Paribahan      \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
+  printf("\n9\tSoudia Paribahan     \tDhaka To Chottogram   \tTk.1000     \t\t04:00  PM");
   printf("\n");
   printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
   getch();
