@@ -210,19 +210,19 @@ void busLists()
 {
   skyBlueColor();
   
-  printf("-----------------------------------------------------------------------------------------");
-  printf("\nBus.No\tName\t\t\tDestinations  \t\tCharges  \t\tTime\n");
-  printf("-----------------------------------------------------------------------------------------");
+  printf("-------------------------------------------------------------------------------------------------");
+  printf("\nBus.No\tName\t\t\t\tDestinations  \t\tCharges  \t\tTime\n");
+  printf("-------------------------------------------------------------------------------------------------");
   resetColor();
-  printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000     \t\t10:00  PM");
-  printf("\n2\tAK_Travels           \tDhaka To Syleth       \tTk.1000     \t\t01:30  PM");
-  printf("\n3\tEna Paribahan        \tDhaka To Kuakata      \tTk.1500     \t\t03:50  PM");
-  printf("\n4\tSuper Deluxe         \tDhaka To Dinajpur     \tTk.2000     \t\t07:00  AM");
-  printf("\n5\tSkyLine              \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
-  printf("\n6\tRoyal Express        \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
-  printf("\n7\tShohag Paribahan     \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
-  printf("\n8\tHanif Paribahan      \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
-  printf("\n9\tSoudia Paribahan     \tDhaka To Chottogram   \tTk.1000     \t\t07:00  PM");
+  printf("\n1\tSaintmartin Paribahan     \tDhaka to Cox's Bazar  \tTK.2000     \t\t10:00  PM");
+  printf("\n2\tAK_Travels                \tDhaka To Syleth       \tTk.1000     \t\t01:30  PM");
+  printf("\n3\tEna Paribahan             \tDhaka To Kuakata      \tTk.1500     \t\t03:50  PM");
+  printf("\n4\tSuper Deluxe              \tDhaka To Dinajpur     \tTk.2000     \t\t07:00  AM");
+  printf("\n5\tSkyLine                   \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
+  printf("\n6\tRoyal Express             \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
+  printf("\n7\tShohag Paribahan          \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
+  printf("\n8\tHanif Paribahan           \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
+  printf("\n9\tSoudia Paribahan          \tDhaka To Chottogram   \tTk.1000     \t\t07:00  PM");
   printf("\n");
   printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
   getch();
