@@ -163,7 +163,7 @@ int cost(BST *r)
   switch (buscost % 3)
   {
   case 1:
-    return 70;
+    return 2000;
     break;
   case 2:
     return 55;
