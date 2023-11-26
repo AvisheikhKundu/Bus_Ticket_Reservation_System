@@ -166,7 +166,7 @@ int cost(BST *r)
     return 2000;
     break;
   case 2:
-    return 55;
+    return 1000;
     break;
   case 0:
     return 40;
