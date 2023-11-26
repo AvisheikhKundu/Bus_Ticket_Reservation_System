@@ -169,7 +169,7 @@ int cost(BST *r)
     return 1000;
     break;
   case 0:
-    return 40;
+    return 1500;
     break;
   default:
     return 0;
