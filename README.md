@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Bus_Ticket_Reservation_System 
+=======
+﻿# Bus_Ticket_Reservation_System 
+>>>>>>> fa29ad9c3cf57af195813bf6a0df72a8a4fc692c
 ## Here is the some snapshots of outputs of my project :
 
 
