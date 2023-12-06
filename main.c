@@ -6,10 +6,10 @@
 
 typedef struct BinarySearchTree BST;
 
-// if bst is empty then we have to handle the error
+
 struct BinarySearchTree
 {
-  int PassnNo; // busNo0SeatNo.
+  int PassnNo; 
   char name[20];
   struct BinarySearchTree *left;
   struct BinarySearchTree *right;
@@ -17,34 +17,33 @@ struct BinarySearchTree
 
 BST *root = NULL;
 
-int cost(BST *r);              // calculates costs
-void status();                 // shows bus and seats status
-void busLists();               // shows buslist and do booking seat and return customer ID
-void DisplaySeat(int bus[33]); // Display the seats of buses
-void cancel(int x);            // cancel the booking
-BST *reservationInfo(BST *, int, int *); // Display Reservation Info
-BST *insert(BST **r, int custID);       // inserting a node
+int cost(BST *r);              
+void status();                 
+void busLists();               
+void DisplaySeat(int bus[33]); 
+void cancel(int x);            
+BST *reservationInfo(BST *, int, int *); 
+BST *insert(BST **r, int custID);       
 
 int busSeat[32][9] = {0};
 
-void skyBlueColor() /// Print the message in sky blue color
+void skyBlueColor() 
 {
-  printf("\033[1;36m"); // 1;36 corresponds to sky blue color
+  printf("\033[1;36m"); 
 }
-
-void resetColor() /// reset the old color of console
+void resetColor() 
 {
   printf("\033[0m");
 }
 
-BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
+BST *reservationInfo(BST *r, int s, int *custIDmatched) 
 {
   if (r == NULL)
     return NULL;
   BST *presentnode = r;
   while (presentnode)
   {
-    // --------------------
+   
 
     if (presentnode->PassnNo == s)
     {
@@ -122,7 +121,7 @@ void DisplaySeat(int bus[33])
       if (bus[i] == 0)
         printf("EMPTY ");
       else
-        printf("BOOKED"); // reserv
+        printf("BOOKED"); 
     }
     printf("         ");
     if (i % 4 == 0)
@@ -152,7 +151,7 @@ login:
   gets(matchPass);
 }
 
-  value = strcmp(passWord, matchPass); /// string compare is function defined in headerfile i.e string.h
+  value = strcmp(passWord, matchPass); 
   if (value != 0)
   {
     skyBlueColor();
@@ -309,10 +308,10 @@ main:
     switch (num)
     {
     case 1:
-      busLists(); // for list of bus
+      busLists(); 
       break;
     case 2:
-      busLists(); // for booking the tickets
+      busLists(); 
 
       int CustId, choice, seats;
 
