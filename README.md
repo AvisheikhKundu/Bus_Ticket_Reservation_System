@@ -1,5 +1,5 @@
 ﻿# Bus_Ticket_Reservation_System
-#Here is the some snapshot of outputs of my project :
+Here is the some snapshot of outputs of my project :
 
 ![Dashboard_Main](https://github.com/AvisheikhKundu/Bus_Ticket_Reservation_System/assets/99108598/0036b2de-04fb-45a7-b4b8-3f9cbdb11f50)
 ![After LogIn](https://github.com/AvisheikhKundu/Bus_Ticket_Reservation_System/assets/99108598/41ee347a-cc55-4bcc-81d8-2f78c52bac90)
