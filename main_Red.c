@@ -3,9 +3,7 @@
 #include <conio.h>
 #include <string.h>
 #include <time.h>
-
 typedef struct BinarySearchTree BST;
-
 // if bst is empty then we have to handle the error
 struct BinarySearchTree
 {
@@ -14,29 +12,24 @@ struct BinarySearchTree
   struct BinarySearchTree *left;
   struct BinarySearchTree *right;
 };
-
 BST *root = NULL;
-
 int cost(BST *r);              // calculates costs
 void status();                 // shows bus and seats status
 void busLists();               // shows buslist and do booking seat and return customer ID
 void DisplaySeat(int bus[33]); // Display the seats of buses
-void cancel(int x);            // cancel the booking
+void cancel(int x);            //cancel the booking 
 BST *reservationInfo(BST *, int, int *); // Display Reservation Info
-BST *insert(BST **r, int custID);       // inserting a node
+BST *insert(BST **r, int custID); // inserting a node 
 
 int busSeat[32][9] = {0};
-
-void skyBlueColor() /// Print the message in sky blue color
+void redColor() /// Print the message in redColor
 {
-  printf("\033[1;36m"); // 1;36 corresponds to sky blue color
+  printf("\033[1;31m");
 }
-
 void resetColor() /// reset the old color of console
 {
   printf("\033[0m");
 }
-
 BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
 {
   if (r == NULL)
@@ -49,7 +42,7 @@ BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
     if (presentnode->PassnNo == s)
     {
       *custIDmatched = 1;
-      skyBlueColor();
+      redColor();
       printf("\n-----------------------------------------------------------------");
       printf("\n||              NAME: %10s                               ||", (presentnode->name));
       printf("\n||              CUSTOMER ID: %d                              ||", presentnode->PassnNo);
@@ -69,7 +62,6 @@ BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
 
   return NULL;
 }
-
 BST *insert(BST **r, int custId)
 {
   if (*r == NULL)
@@ -107,7 +99,7 @@ void DisplaySeat(int bus[33])
 {
   for (int i = 1; i <= 32; i++)
   {
-    skyBlueColor();
+    redColor();
     if (i < 10 && i > 0)
     {
       printf("0%d .", i);
@@ -129,7 +121,6 @@ void DisplaySeat(int bus[33])
       printf("\n");
   }
 }
-
 void login()
 {
   char userName[20] = "user";
@@ -137,13 +128,12 @@ void login()
   char matchPass[20];
   char matchUser[20];
   int value;
-  skyBlueColor();
+  redColor();
   printf("\n\n=========================================================================================\n");
   printf("\n\t\t\tWELCOME TO ONLINE BUS RESERVATION");
   printf("\n\n=========================================================================================\n\n");
   resetColor();
 login:
-
 {
   printf("\n\nUserName: ");
   gets(matchUser);
@@ -155,7 +145,7 @@ login:
   value = strcmp(passWord, matchPass); /// string compare is function defined in headerfile i.e string.h
   if (value != 0)
   {
-    skyBlueColor();
+    redColor();
     printf("\nINVALID DETAILS TRY AGAIN...\n");
     resetColor();
     goto login;
@@ -165,7 +155,6 @@ login:
     printf("\nLOGED IN SUCCESFULLY...\n");
   }
 }
-
 int cost(BST *r)
 {
   int cost, buscost;
@@ -173,20 +162,19 @@ int cost(BST *r)
   switch (buscost % 3)
   {
   case 1:
-    return 2000;
+    return 70;
     break;
   case 2:
-    return 1000;
+    return 55;
     break;
   case 0:
-    return 1500;
+    return 40;
     break;
   default:
     return 0;
     break;
   }
 }
-
 void status()
 {
   int busNum;
@@ -196,7 +184,7 @@ busInput:
   scanf("%d", &busNum);
   if (busNum <= 0 || busNum >= 10)
   {
-    skyBlueColor();
+    redColor();
     printf("\n  PLEASE ENTER CORRECT BUS NUMBER !!\n");
     resetColor();
     goto busInput;
@@ -205,29 +193,26 @@ busInput:
   DisplaySeat(busSeat[busNum]);
   getch();
 }
-
 void busLists()
 {
-  skyBlueColor();
-  
-  printf("-------------------------------------------------------------------------------------------------");
-  printf("\nBus.No\tName\t\t\t\tDestinations  \t\tCharges  \t\tTime\n");
-  printf("-------------------------------------------------------------------------------------------------");
+  redColor();
+  printf("-----------------------------------------------------------------------------------------");
+  printf("\nBus.No\tName\t\t\tDestinations  \t\tCharges  \t\tTime\n");
+  printf("-----------------------------------------------------------------------------------------");
   resetColor();
-  printf("\n1\tSaintmartin Paribahan     \tDhaka to Cox's Bazar  \tTK.2000     \t\t10:00  PM");
-  printf("\n2\tAK_Travels                \tDhaka To Syleth       \tTk.1000     \t\t01:30  PM");
-  printf("\n3\tEna Paribahan             \tDhaka To Kuakata      \tTk.1500     \t\t03:50  PM");
-  printf("\n4\tSuper Deluxe              \tDhaka To Dinajpur     \tTk.2000     \t\t07:00  AM");
-  printf("\n5\tSkyLine                   \tDhaka To Khulna       \tTk.1000     \t\t12:05  AM");
-  printf("\n6\tRoyal Express             \tDhaka to Chuyadanga   \tTk.1500     \t\t09:30  AM");
-  printf("\n7\tShohag Paribahan          \tDhaka To Benapole     \tTk.2000     \t\t11:00  PM");
-  printf("\n8\tHanif Paribahan           \tDhaka To Bagura       \tTk.1000     \t\t08:15  AM");
-  printf("\n9\tSoudia Paribahan          \tDhaka To Chottogram   \tTk.1000     \t\t07:00  PM");
+  printf("\n1\tAK_Travels           \tDhaka to Cox's Bazar  \tTK.2000    \t\t07:00  AM");
+  printf("\n2\tAK_Travels           \tDhaka To Syleth       \tTk.900     \t\t01:30  PM");
+  printf("\n3\tShiv Ganga Travels   \tDhaka To Mymensingh   \tTk.700     \t\t03:50  PM");
+  printf("\n4\tSuper Deluxe         \tDhaka To Khulna       \tTk.700     \t\t07:00  AM");
+  printf("\n5\tSai Baba Travels     \tDhaka To Dinajpur     \tTk.1500    \t\t12:05  AM");
+  printf("\n6\tShine On Travels     \tDhaka to Chuyadanga   \tTk.800     \t\t09:30  AM");
+  printf("\n7\tMayur Travels        \tDhaka To Chottogram   \tTk.1000    \t\t11:00  PM");
+  printf("\n8\tRajjo Travels        \tDhaka To Bagura       \tTk.800     \t\t08:15  AM");
+  printf("\n9\tShree Travels        \tDhaka To Kuakata      \tTk.1000    \t\t04:00  PM");
   printf("\n");
   printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
   getch();
 }
-
 void cancel(int randomNum)
 {
   int reservationNo;
@@ -290,19 +275,19 @@ main:
   do
   {
     printf("\n\n====================================================================\n\n");
-    printf("\t\t\t\033[1;36mBUS RESERVATION\033[0m\t\t");
+    printf("\t\t\t\033[1;31mBUS RESERVATION\033[0m\t\t");
     printf("\n\n=====================================================================\n");
     printf("\n====================");
-    skyBlueColor();
+    redColor();
     printf("  MAIN MENU ");
     resetColor();
     printf("=====================\n\n");
-    printf("   \033[1;36m[1]\033[0m VIEW BUS LIST \n\n");
-    printf("   \033[1;36m[2]\033[0m BOOK TICKETS\n\n");
-    printf("   \033[1;36m[3]\033[0m CANCEL BOOKING\n\n");
-    printf("   \033[1;36m[4]\033[0m BUSES SEATS INFO\n\n");
-    printf("   \033[1;36m[5]\033[0m RESERVATION INFO\n\n");
-    printf("   \033[1;36m[6]\033[0m EXIT\n");
+    printf("   \033[1;31m[1]\033[0m VIEW BUS LIST \n\n");
+    printf("   \033[1;31m[2]\033[0m BOOK TICKETS\n\n");
+    printf("   \033[1;31m[3]\033[0m CANCEL BOOKING\n\n");
+    printf("   \033[1;31m[4]\033[0m BUSES SEATS INFO\n\n");
+    printf("   \033[1;31m[5]\033[0m RESERVATION INFO\n\n");
+    printf("   \033[1;31m[6]\033[0m EXIT\n");
     printf("\n=====================================================\n");
     printf("\n   ENTER YOUR CHOICE: ");
     scanf("%d", &num);
@@ -321,7 +306,7 @@ main:
       scanf("%d", &choice);
       if (choice <= 0 || choice > 9)
       {
-        skyBlueColor();
+        redColor();
         printf("\nENTER VALID BUS NUMBER !! \n");
         resetColor();
         getch();
@@ -334,14 +319,14 @@ main:
       scanf("%d", &seats);
       if (seats <= 0)
       {
-        skyBlueColor();
+        redColor();
         printf("\nENTER VALID SEAT NUMBER!!\n");
         resetColor();
         goto busSeatChoice;
       }
       else if (seats > 32)
       {
-        skyBlueColor();
+        redColor();
         printf("\nENTER VALID SEAT NUMBER WE HAVE ONLY 32 SEATS IN A BUS !!\n");
         resetColor();
         goto busSeatChoice;
@@ -355,28 +340,28 @@ main:
         scanf("%d", &seatNumber);
         if (seatNumber <= 0)
         {
-          skyBlueColor();
+          redColor();
           printf("\n   ENTER VALID SEAT NUMBER!!\n\n");
           resetColor();
           goto seat;
         }
         else if (seatNumber > 32)
         {
-          skyBlueColor();
+          redColor();
           printf("\n   ENTER VALID SEAT NUMBER WE HAVE ONLY 32 SEATS IN A BUS !!\n\n");
           resetColor();
           goto seat;
         }
-        CustId = choice * 1000 + seatNumber; 
+        CustId = choice * 1000 + seatNumber; // CustumerId
         busSeat[choice][seatNumber] = 1;
         root = insert(&root, CustId);
-        skyBlueColor();
+        redColor();
         printf("\n   YOUR CUSTOMER ID IS : %d", CustId);
         resetColor();
         printf("\n\n==================================================================================\n\n");
       }
       printf("\nYOUR RESERVATION NUMBER IS : ");
-      skyBlueColor();
+      redColor();
       printf("%d\n", randomNum);
       printf("\nPLEASE NOTE DOWN YOUR RESERVATION NUMBER FOR CANCEL BOOKING TICKETS!!\n");
       resetColor();
@@ -404,7 +389,7 @@ main:
         root1 = reservationInfo(root, custID, &custIDmatched);
         if (custIDmatched == 0)
         {
-          skyBlueColor();
+          redColor();
           printf("\n   ENTER CORRECT CUSTOMER ID!!\n");
           resetColor();
           goto cust;
@@ -412,15 +397,15 @@ main:
       }
       else
       {
-        skyBlueColor();
+        redColor();
         printf("\n INVALID RESERVATION NUMBER PLEASE ENTER CORRECT RESERVATION NUMBER !!\n");
         resetColor();
-       goto takingReservationNo;
+        goto takingReservationNo;
       }
       break;
     default:
-      skyBlueColor();
-     printf("\n\n   INVALID INPUT CHOOSE CORRECT OPTION\n");
+      redColor();
+      printf("\n\n   INVALID INPUT CHOOSE CORRECT OPTION\n");
       resetColor();
       break; 
     }
