@@ -136,6 +136,7 @@ void login()
   char matchPass[20];
   char matchUser[20];
   int value;
+  
   skyBlueColor();
   printf("\n\n=========================================================================================\n");
   printf("\n\t\t\t\tWELCOME TO OUR BUS TERMINAL\n\n\t\t\t\t   \'Have a safe Journry\'");
