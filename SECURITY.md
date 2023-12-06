@@ -1,5 +1,5 @@
 MIT License
-# Security Policy
+
 
 Copyright (c) 2023 by AVISHEIKH KUNDU
 Use this section to tell people about which versions of your project are
