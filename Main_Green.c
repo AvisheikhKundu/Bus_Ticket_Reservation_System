@@ -130,8 +130,8 @@ void login()
   char matchUser[20];
   int value;
   greenColor();
-  printf("\n\n=========================================================================================\n");
-  printf("\n\t\t\tWELCOME TO ONLINE BUS RESERVATION");
+   printf("\n\n=========================================================================================\n");
+  printf("\n\t\t\t\tWELCOME TO OUR BUS TERMINAL\n\n\t\t\t\t   \'Have a safe Journry\'");
   printf("\n\n=========================================================================================\n\n");
   resetColor();
 login:
