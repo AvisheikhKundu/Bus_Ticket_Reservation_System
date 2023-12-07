@@ -3,43 +3,46 @@
 #include <conio.h>
 #include <string.h>
 #include <time.h>
+
 typedef struct BinarySearchTree BST;
 
-// if bst is empty then we have to handle the error
 struct BinarySearchTree
 {
-  int PassnNo; // busNo0SeatNo.
+  int PassnNo;
   char name[20];
   struct BinarySearchTree *left;
   struct BinarySearchTree *right;
 };
+
 BST *root = NULL;
-int cost(BST *r);              // calculates costs
-void status();                 // shows bus and seats status
-void busLists();               // shows buslist and do booking seat and return customer ID
-void DisplaySeat(int bus[33]); // Display the seats of buses
-void cancel(int x);            // cancel the booking
-BST *reservationInfo(BST *, int, int *); // Display Reservation Info
-BST *insert(BST **r, int custID); // inserting a node
+
+int cost(BST *r);
+void status();
+void busLists();
+void DisplaySeat(int bus[33]);
+void cancel(int x);
+BST *reservationInfo(BST *, int, int *);
+BST *insert(BST **r, int custID);
 
 int busSeat[32][9] = {0};
-void greenColor() /// Print the message in green color
+
+void greenColor()
 {
   printf("\033[1;32m");
 }
-void resetColor() /// reset the old color of console
+
+void resetColor()
 {
   printf("\033[0m");
 }
-BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
+
+BST *reservationInfo(BST *r, int s, int *custIDmatched)
 {
   if (r == NULL)
     return NULL;
   BST *presentnode = r;
   while (presentnode)
   {
-    // --------------------
-
     if (presentnode->PassnNo == s)
     {
       *custIDmatched = 1;
@@ -63,11 +66,11 @@ BST *reservationInfo(BST *r, int s, int *custIDmatched) // find function
 
   return NULL;
 }
+
 BST *insert(BST **r, int custId)
 {
   if (*r == NULL)
   {
-
     *r = (BST *)malloc(sizeof(BST));
     (*r)->PassnNo = custId;
     if (*r == NULL)
@@ -115,13 +118,14 @@ void DisplaySeat(int bus[33])
       if (bus[i] == 0)
         printf("EMPTY ");
       else
-        printf("BOOKED"); // reserv
+        printf("BOOKED");
     }
     printf("         ");
     if (i % 4 == 0)
       printf("\n");
   }
 }
+
 void login()
 {
   char userName[20] = "user";
@@ -129,11 +133,13 @@ void login()
   char matchPass[20];
   char matchUser[20];
   int value;
+
   greenColor();
-   printf("\n\n=========================================================================================\n");
+  printf("\n\n=========================================================================================\n");
   printf("\n\t\t\t\tWELCOME TO OUR BUS TERMINAL\n\n\t\t\t\t   \'Have a safe Journry\'");
   printf("\n\n=========================================================================================\n\n");
   resetColor();
+
 login:
 {
   printf("\n\nUserName: ");
@@ -143,7 +149,7 @@ login:
   gets(matchPass);
 }
 
-  value = strcmp(passWord, matchPass); /// string compare is function defined in headerfile i.e string.h
+  value = strcmp(passWord, matchPass);
   if (value != 0)
   {
     greenColor();
@@ -156,6 +162,7 @@ login:
     printf("\nLOGED IN SUCCESFULLY...\n");
   }
 }
+
 int cost(BST *r)
 {
   int cost, buscost;
@@ -176,6 +183,7 @@ int cost(BST *r)
     break;
   }
 }
+
 void status()
 {
   int busNum;
@@ -194,11 +202,11 @@ busInput:
   DisplaySeat(busSeat[busNum]);
   getch();
 }
+
 void busLists()
 {
   greenColor();
-  
- printf("-------------------------------------------------------------------------------------------------");
+  printf("-------------------------------------------------------------------------------------------------");
   printf("\nBus.No\tName\t\t\t\tDestinations  \t\tCharges  \t\tTime\n");
   printf("-------------------------------------------------------------------------------------------------");
   resetColor();
@@ -215,6 +223,7 @@ void busLists()
   printf("\n   PRESS 'ENTER' KEY TO CONTINUE ");
   getch();
 }
+
 void cancel(int randomNum)
 {
   int reservationNo;
@@ -296,10 +305,10 @@ main:
     switch (num)
     {
     case 1:
-      busLists(); 
+      busLists();
       break;
     case 2:
-      busLists(); 
+      busLists();
 
       int CustId, choice, seats;
 
@@ -354,7 +363,7 @@ main:
           resetColor();
           goto seat;
         }
-        CustId = choice * 1000 + seatNumber; 
+        CustId = choice * 1000 + seatNumber;
         busSeat[choice][seatNumber] = 1;
         root = insert(&root, CustId);
         greenColor();
@@ -392,7 +401,7 @@ main:
         if (custIDmatched == 0)
         {
           greenColor();
-          printf("\n   ENTER CORRECT CUSTOMER ID!!\n");
+           printf("\n   ENTER CORRECT CUSTOMER ID!!\n");
           resetColor();
           goto cust;
         }
