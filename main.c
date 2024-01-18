@@ -420,6 +420,7 @@ main:
       resetColor();
       break; 
     }
+    
   } while (num != 6);
   printf("\n\n=====================================================================\n\n");
   printf("THANK YOU FOR USING THIS BUS RESERVATION SYSTEM");
